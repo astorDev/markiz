@@ -1,0 +1,18 @@
+- Super-Features (Can be separate Utils)
+    - Markdown -> Telegram Sync Via Bot
+        - Each Commit (in dev) is Sent as a New Message (with commit message and update date)
+            - Or only document with a specific metadata (`telegram_message: true`)
+    - Google Calendar Sync (+ Calendar Editor)
+- Features:
+    - Cosmetics:
+        - More Task Statuses
+        - Better Emojies Editor
+        - Fonts customization
+    - Super-Cosmetics (UX changers)
+        - Built-in Calculator
+        - Fluent links
+            - Metadata inlining
+            - Docs inlining
+    - Collaborative Experience
+        - @ - for people tagging/assigning
+        - automatic `git save` in a collaborative UI
