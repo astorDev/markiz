@@ -1,4 +1,0 @@
-## Peers
-
-- Hack.md - ✅
-- Obsidian - ❌
