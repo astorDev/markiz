@@ -1,6 +1,6 @@
 # Sections
 
-Markdown documents are normally rather flat. Headers (lines starting with `#`'s) are rendered as `<hx>` html tags and direct text is rendered as `<p>` tags. Headers allow structuring the document of course, and are getting assigned an `id` attribute by most rendererers. This lets headers to conceptually act as a section pointers. Since headers are always at the beginning of a section, navigation by `id` works perfectly fine. 
+Markdown documents are normally rather flat. Headers (lines starting with `#`) are rendered as `<hx>` HTML tags and direct text is rendered as `<p>` tags. Headers allow structuring the document, and most renderers assign them an `id` attribute. This lets headers conceptually act as section pointers. Since headers are always at the beginning of a section, navigation by `id` works perfectly fine.
 
 However, this does not help extraction match, because headers are on the same level as content. Here we introducing sections to markdown. The concept is simple: a section starts with a first header in a specific level and ends when the next header on the same level appears. It "steals" `id` from the header as well. So for this document:
 
