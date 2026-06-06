@@ -1,3 +1,4 @@
 <Solution>
-  <Project Path="get/cli/Markiz.Get.Cli.csproj" />
+    <Project Path="get/lib/Markiz.Get.csproj" />
+    <Project Path="get/cli/Markiz.Get.Cli.csproj" />
 </Solution>

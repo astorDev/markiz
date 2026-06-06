@@ -15,7 +15,11 @@
 
   <ItemGroup>
     <Using Include="System.CommandLine" />
-    <Using Include="NiceShell"/>
+    <Using Include="NiceShell" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\lib\Markiz.Get.csproj" />
   </ItemGroup>
 
 </Project>
