@@ -1,0 +1,4 @@
+<Solution>
+    <Project Path="sections/markdig/lib/Markiz.Sections.Markdig.csproj" />
+    <Project Path="sections/markdig/tests/Markiz.Sections.Markdig.Tests.csproj" />
+</Solution>
