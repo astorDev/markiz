@@ -19,7 +19,7 @@ public class MarkdownSegmentExtractorManager(IEnumerable<Func<string, IMarkdownS
 
 public interface IMarkdownSegmentDirective
 {
-    static abstract IMarkdownSegmentDirective? From(string directivePart);
+    //static abstract IMarkdownSegmentDirective? From(string directivePart);
     bool MatchesBeginningOfSegment(string line);
     bool MatchesEndOfSegment(string line);
 }
