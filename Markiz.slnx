@@ -1,6 +1,8 @@
 <Solution>
     <Project Path="tables/id/markdig/tests/Markiz.Tables.Id.Markdig.Tests.csproj" />
     <Project Path="tables/id/markdig/lib/Markiz.Tables.Id.Markdig.csproj" />
+    <Project Path="get/markdig/lib/Markiz.Get.Markdig.csproj" />
+    <Project Path="get/markdig/tests/Markiz.Get.Markdig.Tests.csproj" />
     <Project Path="sections/markdig/lib/Markiz.Sections.Markdig.csproj" />
     <Project Path="sections/markdig/tests/Markiz.Sections.Markdig.Tests.csproj" />
 </Solution>
