@@ -1,0 +1,3 @@
+# Table Ids
+
+Having an id for a markdown table is essential to make using markdown tables as a spreadsheet-like source possible (for example, when a table represents financial or statistical data). Unlike standard markdown, with the introduction of [sections](../../sections/README.md) we have a rather unambiguous way to generate an id for a table: `{section-name}-t{table order number}`. In a rare case when a table is out of a section (for example, when you have an untitled markdown document with a table), the id will be simply: `t{table order number}`
