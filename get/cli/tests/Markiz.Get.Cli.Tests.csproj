@@ -13,10 +13,15 @@
 
   <ItemGroup>
     <Using Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
+    <Using Include="NiceShell" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\app\Markiz.Get.Cli.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="example.md" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
 </Project>

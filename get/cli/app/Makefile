@@ -3,13 +3,13 @@ run:
 
 install:
 	dotnet pack -c Release
-	dotnet tool install --global --source ./bin/Release Get.Cli --allow-downgrade
+	dotnet tool install --global --source ./bin/Release Markiz.Get.Cli --allow-downgrade
 
 install-from-nuget:
-	dotnet tool install --global Get.Cli
+	dotnet tool install --global Markiz.Get.Cli
 
 uninstall:
-	dotnet tool uninstall --global Get.Cli
+	dotnet tool uninstall --global Markiz.Get.Cli
 
 reinstall:
 	make uninstall || true

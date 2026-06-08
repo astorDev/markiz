@@ -1,34 +1,49 @@
+using Markdig;
+using Markiz.Get.Markdig;
+using Markiz.Sections.Markdig;
+using Markiz.Tables.Id.Markdig;
+
 public class GetCommand : Command
 {
-    private readonly Option<string> nameOption = new("--name")
-    {
-        Description = "The name of the person to greet.",
-        Required = true
-    };
-
     private readonly Argument<string> pathArgument = new("path")
     {
-        Description = "The path from which to read files.",
+        Description = "The path to the markdown file and fragment id, e.g. file.md#section-id.",
         Arity = ArgumentArity.ExactlyOne
     };
 
-    public GetCommand() : base("get", "Greet a person by name.")
+    public GetCommand() : base("get", "Extract a markdown fragment by id.")
     {
         Add(pathArgument);
-        Add(nameOption);
         SetAction(Execute);
     }
 
     private void Execute(ParseResult parseResult)
     {
-        var name = parseResult.GetRequiredValue(nameOption);
         var path = parseResult.GetRequiredValue(pathArgument);
+        var content = GetContent(path);
+        Console.WriteLine(content);
+    }
 
-        Console.WriteLine($"Hello, {name}!");
-        Console.WriteLine($"ls from the path you've provided:");
-        Directory.GetFileSystemEntries(path)
-            .Select(Path.GetFileName)
-            .ToList()
-            .ForEach(Console.WriteLine);
+    public static string GetContent(string path)
+    {
+        var hashIndex = path.LastIndexOf('#');
+        if (hashIndex < 0) throw new ArgumentException("Path must be in format file.md#id");
+
+        var filePath = path[..hashIndex];
+        var id = path[(hashIndex + 1)..];
+
+        var markdown = File.ReadAllText(filePath);
+
+        var pipeline = new MarkdownPipelineBuilder()
+            .UseSections()
+            .UseSectionIds()
+            .UsePipeTables()
+            .UseTableIds()
+            .Build();
+
+        var document = Markdown.Parse(markdown, pipeline);
+        var block = document.Get(id);
+
+        return block.Content();
     }
 }
