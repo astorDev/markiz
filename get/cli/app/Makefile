@@ -1,5 +1,5 @@
 run:
-	dotnet run -- get . --name John
+	dotnet run -- get ../tests/example.md#section-b-t2
 
 install:
 	dotnet pack -c Release

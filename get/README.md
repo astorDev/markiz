@@ -5,7 +5,7 @@ With introduction of [sections](../sections/README.md) and [table ids](../tables
 
 ## Cli
 
-The CLI **does** depend on `sections` and `table ids`, so you can get (extract) a whole section using it's id:
+The CLI **does** depend on `sections` and `table ids`, so you can get (extract) a whole section using its id:
 
 ```sh
 markiz-get get example.md#section-a
