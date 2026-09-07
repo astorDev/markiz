@@ -11,4 +11,4 @@ The good news is that duckdb already fully handles dealing with local files and 
 
 ## Inspirations
 
-- [DuckData Obsidian Plugin](https://community.obsidian.md/plugins/duckdata?utm_source=chatgpt.com): Very similar, but slightly more complex and embeds the 
+- [DuckData Obsidian Plugin](https://community.obsidian.md/plugins/duckdata?utm_source=chatgpt.com): Very similar, but slightly more complex and obsidian-specific.
