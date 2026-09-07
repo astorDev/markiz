@@ -5,6 +5,7 @@ Sometimes you might want to have an interactive data/tables in markdown that you
 ## Implementation Ideas
 
 - [`duckdb` Code-Block Rendering Query Results](duck/README.md)
+- [`shres` Code-Block Rendering Shell Command Results](shres/README.md)
 
 ## Inspirations
 
